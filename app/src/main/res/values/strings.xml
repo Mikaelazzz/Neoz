@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Neoz</string>
+    <string name="buff">Buff</string>
+    <string name="nerf">Nerf</string>
+    <string name="penyesuaian">Penyesuaian</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

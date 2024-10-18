@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Beranda"
+    android:background="@drawable/gradient">
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scroll"
+        android:paddingTop="40dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update Patch Terbaru"
+                android:paddingLeft="10dp"
+                android:textColor="@color/font"
+                android:textSize="20sp"
+                android:fontFamily="@font/josefinsansbold"
+                android:id="@+id/patch"
+                />
+
+            <HorizontalScrollView
+                android:id="@+id/schori"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dp"
+                android:paddingStart="10dp"
+                android:layout_below="@+id/patch">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gambar1"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gambar1"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gambar1"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gambar1"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <TextView
+                android:id="@+id/toppick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top Pick Hero High Tier"
+                android:layout_below="@+id/schori"
+                android:fontFamily="@font/josefinsansbold"
+                android:textSize="20sp"
+                android:textColor="@color/font"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp">
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/hero1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:layout_below="@+id/toppick"
+                >
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gambar1"
+                    android:contentDescription="Logo" />
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/namahero1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefinsansbold"
+                        android:text="Claude"
+                        android:textColor="@color/font"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/rolehero1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefinsansbold"
+                        android:text="Mage"
+                        android:textColor="@color/font"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/banhero1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefinsansbold"
+                        android:text="Ban Rate : 24.99%"
+                        android:textColor="@color/font"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/tipehero1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefinsansbold"
+                        android:text="Damage /  Crowd Control"
+                        android:textColor="@color/font"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/hero2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:layout_below="@+id/hero1"
+                >
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gambar1"
+                    android:contentDescription="Logo" />
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/namahero2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefinsansbold"
+                        android:text="Claude"
+                        android:textColor="@color/font"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/rolehero2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefinsansbold"
+                        android:text="Mage"
+                        android:textColor="@color/font"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/banhero2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefinsansbold"
+                        android:text="Ban Rate : 24.99%"
+                        android:textColor="@color/font"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/tipehero2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefinsansbold"
+                        android:text="Damage /  Crowd Control"
+                        android:textColor="@color/font"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <Button
+                android:layout_marginTop="15dp"
+                android:id="@+id/lainnya"
+                android:layout_below="@id/hero2"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:text="lainnya"
+                android:fontFamily="@font/poppinsbold"
+                android:textSize="14sp"
+                android:background="@drawable/btn2"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/font"
+                />
+            <TextView
+                android:id="@+id/listhero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hero"
+                android:layout_below="@+id/lainnya"
+                android:fontFamily="@font/josefinsansbold"
+                android:textSize="20sp"
+                android:textColor="@color/font"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp">
+            </TextView>
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/listhero"
+                android:columnCount="4"
+                android:rowCount="2">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="18dp">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/hero1"
+                        android:background="@drawable/radius" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ling"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppinsbold"
+                        android:textColor="@color/font"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="18dp">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/hero1"
+                        android:background="@drawable/radius" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ling"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppinsbold"
+                        android:textColor="@color/font"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="18dp">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/hero1"
+                        android:background="@drawable/radius" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ling"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppinsbold"
+                        android:textColor="@color/font"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="18dp">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/hero1"
+                        android:background="@drawable/radius" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ling"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppinsbold"
+                        android:textColor="@color/font"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="18dp">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/hero1"
+                        android:background="@drawable/radius" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ling"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppinsbold"
+                        android:textColor="@color/font"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="18dp">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/hero1"
+                        android:background="@drawable/radius" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ling"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppinsbold"
+                        android:textColor="@color/font"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="18dp">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/hero1"
+                        android:background="@drawable/radius" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ling"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppinsbold"
+                        android:textColor="@color/font"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="18dp">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/hero1"
+                        android:background="@drawable/radius" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ling"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppinsbold"
+                        android:textColor="@color/font"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+
+
+
+
+            </GridLayout>
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+        </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/button"
+        app:itemTextColor="@color/font"
+        app:menu="@menu/menu"
+        app:itemIconSize="70dp" />
+
+
+
+
+
+</RelativeLayout>

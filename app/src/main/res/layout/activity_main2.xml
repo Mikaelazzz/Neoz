@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity2"
+    android:background="@drawable/gradient">
+
+<TextView
+    android:id="@+id/welcome"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Welcome in Neoz"
+    android:layout_centerHorizontal="true"
+    android:textSize="36dp"
+    android:textColor="@color/font"
+    android:layout_marginTop="41pt"
+    android:layout_marginBottom="10pt"
+    android:fontFamily="@font/josefinsansregular"
+    />
+
+    <LinearLayout
+        android:id="@+id/div1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="27dp"
+        android:layout_below="@+id/welcome"
+        >
+
+        <ImageView
+            android:id="@+id/images"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/logo1"
+            android:contentDescription="Logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="29dp"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Praktis UI"
+                android:textSize="32sp"
+                android:fontFamily="@font/josefinsansregular"
+                android:textColor="@color/font"
+                />
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tampilan Yang Mudah Dipahami"
+                android:textSize="16sp"
+                android:fontFamily="@font/josefinsansregular"
+                android:textColor="@color/font"
+                android:layout_marginTop="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/div2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="27dp"
+        android:layout_below="@+id/div1">
+
+        <ImageView
+            android:id="@+id/images2"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/logo2"
+            android:contentDescription="Logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="29dp"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cek Win Rate"
+                android:textSize="32sp"
+                android:fontFamily="@font/josefinsansregular"
+                android:textColor="@color/font"
+                 />
+
+            <TextView
+                android:id="@+id/desc2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Untuk Mengetahui Win Rate Hero"
+                android:textSize="16sp"
+                android:fontFamily="@font/josefinsansregular"
+                android:textColor="@color/font"
+                android:layout_marginTop="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/div3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="27dp"
+        android:layout_below="@+id/div2">
+
+        <ImageView
+            android:id="@+id/images3"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/logo3"
+            android:contentDescription="Logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="29dp"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/title3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Informasi Patch"
+                android:textSize="32sp"
+                android:fontFamily="@font/josefinsansregular"
+                android:scrollbarSize="32dp"
+                android:textColor="@color/font"
+                 />
+
+            <TextView
+                android:id="@+id/desc3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Memberikan Informasi Patch Baru"
+                android:textSize="16sp"
+                android:fontFamily="@font/josefinsansregular"
+                android:textColor="@color/font"
+                android:layout_marginTop="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/div3"
+        android:layout_centerHorizontal="true"
+        >
+
+        <Button
+            android:id="@+id/button_next"
+            android:layout_width="355dp"
+            android:layout_height="65dp"
+            android:text="Lanjutkan >>"
+            android:background="@drawable/button"
+            android:fontFamily="@font/poppinsbolditalic"
+            android:textSize="32dp"
+            android:textColor="@color/font"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
