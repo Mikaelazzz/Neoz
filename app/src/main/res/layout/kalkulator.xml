@@ -10,9 +10,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Haloooo"
+        android:text="Haloooo Mika"
         android:fontFamily="@font/poppinsbold"
         android:textSize="32sp"
-        android:textColor="@color/font"/>
+        android:textColor="@color/font" />
 
 </FrameLayout>
