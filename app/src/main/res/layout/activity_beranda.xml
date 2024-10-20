@@ -420,8 +420,6 @@
                 </LinearLayout>
 
 
-
-
             </GridLayout>
         </RelativeLayout>
 
@@ -439,12 +437,9 @@
         app:itemTextColor="@color/font"
         app:menu="@menu/menu"
         app:itemIconSize="60dp"
-        app:itemTextAppearanceActiveBoldEnabled="true"
         app:itemTextAppearanceActive="@style/BottomNavigationViewTextStyle"
         app:itemTextAppearanceInactive="@style/BottomNavigationViewTextStyle"
         />
-
-
 
 
 

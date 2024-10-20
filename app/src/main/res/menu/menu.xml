@@ -5,6 +5,7 @@
     android:icon="@drawable/guide"
     android:title="Guide"
     />
+
     <item
         android:id="@+id/kalkulator"
         android:icon="@drawable/kalkulator"

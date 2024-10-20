@@ -13,11 +13,8 @@ class MainActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
 
         val buttonNext = findViewById<Button>(R.id.button_next)
-
         buttonNext.setOnClickListener{
-
             val intent = Intent (this,Beranda::class.java)
-
             startActivity(intent)
         }
     }
