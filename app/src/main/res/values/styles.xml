@@ -3,4 +3,8 @@
     <style name="Button">
         <item name="android:background">#3B73CA</item>
     </style>
+    <style name="BottomNavigationViewTextStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:fontFamily">@font/poppinsbold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
 </resources>

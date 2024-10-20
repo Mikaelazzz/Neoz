@@ -51,3 +51,4 @@ class Beranda : AppCompatActivity() {
             .commit()
     }
 }
+

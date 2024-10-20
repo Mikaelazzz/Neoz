@@ -433,12 +433,16 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/footer"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="90dp"
         android:layout_alignParentBottom="true"
         android:background="@color/button"
         app:itemTextColor="@color/font"
         app:menu="@menu/menu"
-        app:itemIconSize="70dp" />
+        app:itemIconSize="60dp"
+        app:itemTextAppearanceActiveBoldEnabled="true"
+        app:itemTextAppearanceActive="@style/BottomNavigationViewTextStyle"
+        app:itemTextAppearanceInactive="@style/BottomNavigationViewTextStyle"
+        />
 
 
 

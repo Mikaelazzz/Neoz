@@ -37,7 +37,9 @@
             android:textColor="@color/font"
             android:textAlignment="viewStart"
             android:paddingStart="20dp"
-            android:drawablePadding="20dp"/>
+            android:drawablePadding="20dp"
+            android:fontFamily="@font/poppinsbold"
+            android:textSize="18sp"/>
         <Button
             android:layout_width="375dp"
             android:layout_height="40dp"
@@ -49,7 +51,9 @@
             android:textColor="@color/font"
             android:textAlignment="viewStart"
             android:paddingStart="20dp"
-            android:drawablePadding="20dp"/>
+            android:drawablePadding="20dp"
+            android:fontFamily="@font/poppinsbold"
+            android:textSize="18sp"/>
         <Button
             android:layout_width="375dp"
             android:layout_height="40dp"
@@ -61,7 +65,9 @@
             android:textColor="@color/font"
             android:textAlignment="viewStart"
             android:paddingStart="20dp"
-            android:drawablePadding="20dp"/>
+            android:drawablePadding="20dp"
+            android:fontFamily="@font/poppinsbold"
+            android:textSize="18sp"/>
         <Button
             android:layout_width="375dp"
             android:layout_height="40dp"
@@ -74,6 +80,8 @@
             android:textAlignment="viewStart"
             android:paddingStart="20dp"
             android:drawablePadding="20dp"
+            android:fontFamily="@font/poppinsbold"
+            android:textSize="18sp"
             />
         <Button
             android:layout_width="375dp"
@@ -85,7 +93,9 @@
             android:textColor="@color/font"
             android:textAlignment="viewStart"
             android:paddingStart="20dp"
-            android:drawablePadding="20dp" />
+            android:drawablePadding="20dp"
+            android:fontFamily="@font/poppinsbold"
+            android:textSize="18sp"/>
 
     </LinearLayout>
 
