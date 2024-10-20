@@ -42,7 +42,7 @@
             android:layout_width="375dp"
             android:layout_height="40dp"
             android:text="Win Rate Dengan Lose Streak"
-            android:drawableStart="@drawable/win"
+            android:drawableStart="@drawable/lose"
             android:background="@drawable/btn2"
             android:paddingLeft="10dp"
             android:layout_marginBottom="20dp"
