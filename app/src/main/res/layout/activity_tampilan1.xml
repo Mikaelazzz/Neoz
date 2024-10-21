@@ -31,6 +31,17 @@
         android:layout_marginTop="168dp"
         android:layout_marginLeft="115dp"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ASSASIN"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="@color/font"
+        android:textSize="14sp"
+        android:layout_marginTop="190dp"
+        android:layout_marginLeft="115dp"
+        />
+
 
 
 </RelativeLayout>
