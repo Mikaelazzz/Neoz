@@ -47,71 +47,72 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/logoh1"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="30dp"
         android:orientation="vertical"
         >
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal">
             <ImageView
-                android:layout_width="15dp"
-                android:layout_height="22dp"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
                 android:src="@drawable/bp"
-                android:scaleType="center"/>
+                android:scaleType="fitCenter"/>
 
             <TextView
-                android:layout_width="50dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppinsbold"
                 android:text="32000"
-                android:textAlignment="center"
+                android:textAlignment="viewStart"
+                android:paddingHorizontal="3dp"
                 android:textColor="@color/font"
                 android:textSize="15sp"
                 />
         </LinearLayout>
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal">
             <ImageView
-                android:layout_width="15dp"
-                android:layout_height="22dp"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
                 android:src="@drawable/dm"
-                android:scaleType="center"/>
+                android:scaleType="fitCenter"/>
 
             <TextView
-                android:layout_width="50dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppinsbold"
                 android:text="599"
                 android:textAlignment="viewStart"
-                android:paddingHorizontal="2dp"
+                android:paddingHorizontal="3dp"
                 android:textColor="@color/font"
                 android:textSize="15sp"
                 />
         </LinearLayout>
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal">
             <ImageView
-                android:layout_width="15dp"
-                android:layout_height="22dp"
-                android:src="@drawable/tiket"
-                android:scaleType="center"/>
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/tikett"
+                android:scaleType="fitCenter"/>
 
             <TextView
-                android:layout_width="50dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppinsbold"
                 android:text="0"
                 android:textAlignment="viewStart"
-                android:paddingHorizontal="2dp"
+                android:paddingHorizontal="3dp"
                 android:textColor="@color/font"
                 android:textSize="15sp"
                 />
