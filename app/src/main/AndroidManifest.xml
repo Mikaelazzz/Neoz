@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Neoz"
         tools:targetApi="31">
         <activity
+            android:name=".tampilan1"
+            android:exported="false" />
+        <activity
             android:name=".Beranda"
             android:exported="false" />
         <activity
