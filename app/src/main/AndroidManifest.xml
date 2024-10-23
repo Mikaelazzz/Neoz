@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Neoz"
         tools:targetApi="31">
         <activity
+            android:name=".hero_item"
+            android:exported="false" />
+        <activity
             android:name=".lainnya"
             android:exported="false" />
         <activity
