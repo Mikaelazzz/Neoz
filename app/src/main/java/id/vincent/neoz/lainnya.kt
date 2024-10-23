@@ -1,5 +1,6 @@
 package id.vincent.neoz
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.LinearLayout
@@ -19,20 +20,30 @@ import android.widget.TextView
 
 class lainnya : AppCompatActivity() {
 
+
     data class Hero(
         val image: Int,
         val name: String,
         val role: String,
         val banRate: Double,
-        val type: String
+        val type: String,
+        val bghr: Int,
+        val imager: Int,
+        val gold: String,
+        val berlian: String,
+        val tikett: String,
+        val tier: Int,
+        val destier: String,
+        val lane: Int,
+        val tlane: String,
+        val deslane: String
     )
 
     private val heroes = listOf(
-        Hero(R.drawable.gambar1, "Claude", "Mage", 24.99, "Damage / Crowd Control"),
-        Hero(R.drawable.gambar1, "Alice", "Mage", 30.0, "Burst / Crowd Control"),
-        Hero(R.drawable.gambar1, "Aldous", "Fighter", 20.5, "Damage"),
-        Hero(R.drawable.gambar1, "Lancelot", "Assassin", 18.75, "Damage / Burst")
-        // Add more heroes as needed
+        Hero(R.drawable.gambar1, "Claude", "Mage", 24.99, "Damage / Crowd Control", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung, R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() ),
+        Hero(R.drawable.gambar1, "Alice", "Mage", 30.0, "Burst / Crowd Control", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() ),
+        Hero(R.drawable.gambar1, "Aldous", "Fighter", 20.5, "Damage", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() ),
+        Hero(R.drawable.gambar1, "Lancelot", "Assassin", 18.75, "Damage / Burst", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() )
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -109,6 +120,28 @@ class lainnya : AppCompatActivity() {
 
         override fun onBindViewHolder(holder: HeroViewHolder, position: Int) {
             holder.bind(heroes[position])
+            holder.itemView.setOnClickListener {
+                val context = holder.itemView.context
+                val hero = heroes[position]
+                val intent = Intent(context, tampilan1::class.java).apply {
+                    putExtra("image", hero.image)
+                    putExtra("name", hero.name)
+                    putExtra("role", hero.role)
+                    putExtra("banRate", hero.banRate)
+                    putExtra("type", hero.type)
+                    putExtra("bghr", hero.bghr)
+                    putExtra("imager", hero.imager)
+                    putExtra("gold", hero.gold)
+                    putExtra("berlian", hero.berlian)
+                    putExtra("tikett", hero.tikett)
+                    putExtra("tier", hero.tier)
+                    putExtra("destier", hero.destier)
+                    putExtra("lane", hero.lane)
+                    putExtra("tlane", hero.tlane)
+                    putExtra("deslane", hero.deslane)
+                }
+                context.startActivity(intent)
+            }
         }
 
         override fun getItemCount() = heroes.size
