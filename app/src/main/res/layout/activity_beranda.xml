@@ -47,6 +47,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <ImageView
+                        android:id="@+id/schero1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/gambar1"/>
@@ -196,8 +197,8 @@
                 </LinearLayout>
             </LinearLayout>
             <Button
+                android:id="@+id/btnlainnya"
                 android:layout_marginTop="18dp"
-                android:id="@+id/lainnya"
                 android:layout_below="@id/hero2"
                 android:layout_width="120dp"
                 android:layout_height="45dp"
@@ -213,7 +214,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hero"
-                android:layout_below="@+id/lainnya"
+                android:layout_below="@+id/btnlainnya"
                 android:fontFamily="@font/josefinsansbold"
                 android:textSize="20sp"
                 android:textColor="@color/font"
@@ -227,6 +228,7 @@
                 android:columnCount="4"
                 android:rowCount="2">
                 <LinearLayout
+                    android:id="@+id/heror1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
