@@ -1,7 +1,9 @@
 package id.vincent.neoz
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.LinearLayout
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -9,14 +11,21 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class tampilan1 : AppCompatActivity() {
+class lainnya : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_tampilan1)
-
+        setContentView(R.layout.activity_lainnya)
 
         // Mengaktifkan tombol back pada action bar
+
+        val hero : LinearLayout = findViewById(R.id.hero1)
+
+        hero.setOnClickListener {
+            val intent = Intent (this,tampilan1::class.java)
+            startActivity(intent)
+        }
+
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)

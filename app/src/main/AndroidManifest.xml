@@ -15,6 +15,12 @@
         android:theme="@style/Theme.Neoz"
         tools:targetApi="31">
         <activity
+            android:name=".lainnya"
+            android:exported="false" />
+        <activity
+            android:name=".update_patch"
+            android:exported="false" />
+        <activity
             android:name=".tampilan1"
             android:exported="false" />
         <activity
