@@ -3,6 +3,12 @@
     <string name="buff">Buff</string>
     <string name="nerf">Nerf</string>
     <string name="penyesuaian">Penyesuaian</string>
+    <string name="splus">Hero jenis ini saat ini merupakan hero yang paling kuat di dalam game. Disarankan untuk diambil pada pilihan pertama saat matchmaking dan mereka adalah hero yang sulit untuk dilawan dan dilawan.</string>
+    <string name="s">Strong heroes are also parf of meta champions and it is preferred to be selected at the beginning of matchmaking. They are the kind of heroes that can change the fate of the game in good hands.</string>
+    <string name="aplus">Effective Tier heroes are among the good heroes of the game according to their roles and power. They need to be use carefully in order to perform good game.</string>
+    <string name="a">These type of heroes are expected to perform just an average game performance because of their abilities and powers lower than the higher tier heroes.</string>
+    <string name="b">Ineffectual Tier heroes are below average performing heroes and not much performance should be expected unless they are performing good team play.</string>
+    <string name="jungle">Assassins have the highest damage output. Jungling is a good way for them to farm fast. Assassins have high mobility and burst on single targets but can often be weak when soloing lanes early on. In the early game they can level up quickly by killing creeps and find chances to kill single enemies by teamwork with allies in the same lane</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
