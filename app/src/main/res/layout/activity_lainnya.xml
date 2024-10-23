@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Beranda"
+    android:background="@drawable/gradient">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        >
+        <TextView
+            android:id="@+id/toolbartitle"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Top Pick Hero High Tier"
+            android:fontFamily="@font/poppinsbold"
+            android:textSize="20sp"
+            android:textColor="@color/font"
+
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scroll"
+            android:layout_below="@+id/toolbar"
+            android:paddingTop="5dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/hero1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gambar1"
+                        android:contentDescription="Logo" />
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/namahero1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Claude"
+                            android:textColor="@color/font"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/rolehero1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Mage"
+                            android:textColor="@color/font"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/banhero1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Ban Rate : 24.99%"
+                            android:textColor="@color/font"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/tipehero1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Damage /  Crowd Control"
+                            android:textColor="@color/font"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/hero2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_below="@+id/hero1"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gambar1"
+                        android:contentDescription="Logo" />
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/namahero2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Claude"
+                            android:textColor="@color/font"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/rolehero2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Mage"
+                            android:textColor="@color/font"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/banhero2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Ban Rate : 24.99%"
+                            android:textColor="@color/font"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/tipehero2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Damage /  Crowd Control"
+                            android:textColor="@color/font"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/hero3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_below="@+id/hero2"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gambar1"
+                        android:contentDescription="Logo" />
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/namahero3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Claude"
+                            android:textColor="@color/font"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/rolehero3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Mage"
+                            android:textColor="@color/font"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/banhero3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Ban Rate : 24.99%"
+                            android:textColor="@color/font"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/tipehero3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Damage /  Crowd Control"
+                            android:textColor="@color/font"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/hero4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_below="@+id/hero3"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gambar1"
+                        android:contentDescription="Logo" />
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/namahero4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Claude"
+                            android:textColor="@color/font"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/rolehero4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Mage"
+                            android:textColor="@color/font"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/banhero4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Ban Rate : 24.99%"
+                            android:textColor="@color/font"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/tipehero4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Damage /  Crowd Control"
+                            android:textColor="@color/font"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/hero5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_below="@+id/hero4"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gambar1"
+                        android:contentDescription="Logo" />
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/namahero5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Claude"
+                            android:textColor="@color/font"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/rolehero5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Mage"
+                            android:textColor="@color/font"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/banhero5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Ban Rate : 24.99%"
+                            android:textColor="@color/font"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/tipehero5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Damage /  Crowd Control"
+                            android:textColor="@color/font"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/hero6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_below="@+id/hero5"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gambar1"
+                        android:contentDescription="Logo" />
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/namahero6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Claude"
+                            android:textColor="@color/font"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/rolehero6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Mage"
+                            android:textColor="@color/font"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/banhero6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Ban Rate : 24.99%"
+                            android:textColor="@color/font"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/tipehero6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Damage /  Crowd Control"
+                            android:textColor="@color/font"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/hero7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_below="@+id/hero6"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gambar1"
+                        android:contentDescription="Logo" />
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/namahero7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Claude"
+                            android:textColor="@color/font"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/rolehero7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Mage"
+                            android:textColor="@color/font"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/banhero7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Ban Rate : 24.99%"
+                            android:textColor="@color/font"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/tipehero7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Damage /  Crowd Control"
+                            android:textColor="@color/font"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/hero8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_below="@+id/hero7"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gambar1"
+                        android:contentDescription="Logo" />
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/namahero8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Claude"
+                            android:textColor="@color/font"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/rolehero8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Mage"
+                            android:textColor="@color/font"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/banhero8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Ban Rate : 24.99%"
+                            android:textColor="@color/font"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/tipehero8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefinsansbold"
+                            android:text="Damage /  Crowd Control"
+                            android:textColor="@color/font"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+
+
+</RelativeLayout>
