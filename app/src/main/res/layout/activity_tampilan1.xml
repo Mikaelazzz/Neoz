@@ -7,52 +7,74 @@
     android:layout_height="match_parent"
     tools:context=".tampilan1"
     android:background="@drawable/gradient">
-    <RelativeLayout
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        >
+        <TextView
+            android:id="@+id/toolbartitle"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Hero"
+            android:fontFamily="@font/poppinsbold"
+            android:textSize="20sp"
+            android:textColor="@color/font"
+            />
+    </androidx.appcompat.widget.Toolbar>
 
 
-    </RelativeLayout>
     <ImageView
-        android:layout_width="430dp"
-        android:layout_height="155dp"
-        android:src="@drawable/ling"
-        android:layout_marginTop="40dp"/>
+        android:layout_below="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="300dp"
+        android:maxWidth="1000dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:src="@drawable/serene" />
 
     <ImageView
+        android:id="@+id/logohero"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:layout_marginTop="155dp"
+        android:layout_marginTop="248dp"
         android:layout_marginLeft="30dp"
         android:src="@drawable/hero1"
-        android:id="@+id/logoh1"/>
+        />
 
     <TextView
+        android:id="@+id/titlehero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LING"
         android:fontFamily="@font/poppinsbold"
         android:textColor="@color/font"
         android:textSize="20sp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="262dp"
         android:layout_marginLeft="115dp"
         />
     <TextView
+        android:id="@+id/rolehero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ASSASIN"
         android:fontFamily="@font/poppinsbold"
         android:textColor="@color/font"
         android:textSize="14sp"
-        android:layout_marginTop="190dp"
+        android:layout_marginTop="292dp"
         android:layout_marginLeft="115dp"
         />
 
     <LinearLayout
+        android:id="@+id/hargahero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/harga"
-        android:layout_below="@+id/logoh1"
+        android:layout_below="@+id/logohero"
         android:layout_marginTop="12dp"
         android:layout_marginLeft="30dp"
         android:orientation="vertical"
@@ -69,6 +91,7 @@
                 android:scaleType="fitCenter"/>
 
             <TextView
+                android:id="@+id/bpoin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppinsbold"
@@ -91,6 +114,7 @@
                 android:scaleType="fitCenter"/>
 
             <TextView
+                android:id="@+id/dm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppinsbold"
@@ -113,6 +137,7 @@
                 android:scaleType="fitCenter"/>
 
             <TextView
+                android:id="@+id/tiket"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppinsbold"
@@ -126,10 +151,10 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/des"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:id="@+id/des"
-        android:layout_below="@id/harga"
+        android:layout_below="@id/hargahero"
         android:orientation="vertical">
 
         <TextView
@@ -143,8 +168,9 @@
             android:layout_marginTop="15dp"
             android:layout_marginBottom="10dp"
             />
-        
+
         <ImageView
+            android:id="@+id/tierhero"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/hero1"
@@ -152,6 +178,7 @@
             android:layout_marginBottom="15dp"/>
 
         <TextView
+            android:id="@+id/desktier"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Deskripsi"
@@ -184,6 +211,7 @@
             >
 
             <ImageView
+                android:id="@+id/heroLane"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/hero1"
@@ -191,6 +219,7 @@
 
 
             <TextView
+                android:id="@+id/titleherolane"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Jungle"
@@ -202,6 +231,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/deskherolane"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Deskripsi"
