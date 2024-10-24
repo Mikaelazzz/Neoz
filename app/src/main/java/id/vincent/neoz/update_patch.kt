@@ -2,6 +2,7 @@ package id.vincent.neoz
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
@@ -17,6 +18,40 @@ class update_patch : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_update_patch)
+
+        val heroImage = intent.getIntExtra("image", 0)
+        val heroName = intent.getStringExtra("name")
+        val heroRole = intent.getStringExtra("role")
+        val heroBanRate = intent.getDoubleExtra("banRate", 0.0)
+        val heroType = intent.getStringExtra("type")
+        val bgHr = intent.getIntExtra("bghr", 0)
+        val imageR = intent.getIntExtra("imager",0)
+        val goldBp = intent.getStringExtra("gold")
+        val berlianDm = intent.getStringExtra("berlian")
+        val tiketMl = intent.getStringExtra("tikett")
+        val tierHr = intent.getIntExtra("tier",0)
+        val desTier = intent.getStringExtra("destier")
+        val laneHr = intent.getIntExtra("lane",0)
+        val tlaneHr = intent.getStringExtra("tlane")
+        val deslaneHr = intent.getStringExtra("deslane")
+        val desBefore = intent.getStringExtra("desbefore")
+        val desAfter = intent.getStringExtra("desafter")
+
+
+        val bghero = findViewById<ImageView>(R.id.bghero)
+        val imgHero = findViewById<ImageView>(R.id.logohero)
+        val nameHero = findViewById<TextView>(R.id.titlehero)
+        val roleHero = findViewById<TextView>(R.id.rolehero)
+        val deskbeforee = findViewById<TextView>(R.id.desksebelum)
+        val deskafterr = findViewById<TextView>(R.id.desksesudah)
+
+        bghero.setImageResource(bgHr)
+        imgHero.setImageResource(imageR)
+        nameHero.text = heroName ?: "Null"
+        roleHero.text = heroRole ?: "Null"
+        deskbeforee.text = desBefore ?: "Null"
+        deskafterr.text = desAfter ?: "Null"
+
 
         // Mengaktifkan tombol back pada action bar
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
