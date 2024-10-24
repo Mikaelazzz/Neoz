@@ -35,36 +35,23 @@
                 android:id="@+id/patch"
                 />
 
-            <HorizontalScrollView
-                android:id="@+id/schori"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="6dp"
-                android:paddingStart="10dp"
-                android:layout_below="@+id/patch">
-
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:id="@+id/schero1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/schori"
+                    android:layout_below="@+id/patch"
+                    android:paddingTop="6dp"
+                    android:paddingStart="10dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/heroRecyclerViewhori"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/gambar1"/>
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/gambar1"/>
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/gambar1"/>
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/gambar1"/>
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false"
+                        />
                 </LinearLayout>
-            </HorizontalScrollView>
             <TextView
                 android:id="@+id/toppick"
                 android:layout_width="wrap_content"
