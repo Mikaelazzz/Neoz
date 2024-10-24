@@ -36,14 +36,16 @@ class lainnya : AppCompatActivity() {
         val destier: String,
         val lane: Int,
         val tlane: String,
-        val deslane: String
+        val deslane: String,
+        val desbefore: String,
+        val desafter: String
     )
 
     private val heroes = listOf(
-        Hero(R.drawable.gambar1, "Claude", "Mage", 24.99, "Damage / Crowd Control", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung, R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() ),
-        Hero(R.drawable.gambar1, "Alice", "Mage", 30.0, "Burst / Crowd Control", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() ),
-        Hero(R.drawable.gambar1, "Aldous", "Fighter", 20.5, "Damage", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() ),
-        Hero(R.drawable.gambar1, "Lancelot", "Assassin", 18.75, "Damage / Burst", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() )
+        Hero(R.drawable.gambar1, "Claude", "Mage", 24.99, "Damage / Crowd Control", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung, R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() ,"null", "null"),
+        Hero(R.drawable.gambar1, "Alice", "Mage", 30.0, "Burst / Crowd Control", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() , "null", "null"),
+        Hero(R.drawable.gambar1, "Aldous", "Fighter", 20.5, "Damage", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() ,"null", "null" ),
+        Hero(R.drawable.gambar1, "Lancelot", "Assassin", 18.75, "Damage / Burst", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() ,"null", "null" )
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -139,6 +141,9 @@ class lainnya : AppCompatActivity() {
                     putExtra("lane", hero.lane)
                     putExtra("tlane", hero.tlane)
                     putExtra("deslane", hero.deslane)
+                    putExtra("desbefore", hero.desbefore)
+                    putExtra("desafter", hero.desafter)
+
                 }
                 context.startActivity(intent)
             }
