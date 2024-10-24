@@ -2,6 +2,7 @@ package id.vincent.neoz
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,16 +24,24 @@ class Beranda : AppCompatActivity() {
 
 
     private val heroes = listOf(
-        Hero(R.drawable.gambar1, "Claude", "Mage", 24.99, "Damage / Crowd Control", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung, R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() ),
-        Hero(R.drawable.gambar1, "Alice", "Mage", 30.0, "Burst / Crowd Control", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() ),
+        Hero(R.drawable.gambar1, "Claude", "Mage", 24.99, "Damage / Crowd Control", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung, R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString(), "null", "null" ),
+        Hero(R.drawable.gambar1, "Alice", "Mage", 30.0, "Burst / Crowd Control", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString(), "null", "null" ),
            )
 
     private val heroesgrid = listOf(
-        Hero(R.drawable.gambar1, "Ling", "Assasin", 26.27, "Chase / Burst", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung, R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() ),
-        Hero(R.drawable.gambar1, "Freya", "Fighter", 1.26, "Chase / Damage", R.drawable.serene, R.drawable.hero2,"0","599", "0", R.drawable.gold,R.string.splus.toString(),R.drawable.jung,"Gold",R.string.jungle.toString() ),
-        Hero(R.drawable.gambar1, "Aldous", "Fighter", 20.5, "Damage", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() ),
-        Hero(R.drawable.gambar1, "Lancelot", "Assassin", 18.75, "Damage / Burst", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() )
+        Hero(R.drawable.gambar1, "Ling", "Assasin", 26.27, "Chase / Burst", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung, R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString(),"null", "null" ),
+        Hero(R.drawable.gambar1, "Freya", "Fighter", 1.26, "Chase / Damage", R.drawable.serene, R.drawable.hero2,"0","599", "0", R.drawable.gold,R.string.splus.toString(),R.drawable.jung,"Gold",R.string.jungle.toString(),"null", "null" ),
+        Hero(R.drawable.gambar1, "Aldous", "Fighter", 20.5, "Damage", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString(),"null", "null" ),
+        Hero(R.drawable.gambar1, "Lancelot", "Assassin", 18.75, "Damage / Burst", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString(),"null", "null" )
     )
+    private val heroeshori = listOf(
+        Hero(R.drawable.gambar1, "Ling", "Assasin", 26.27, "Chase / Burst", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung, R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString(),"null", "null" ),
+        Hero(R.drawable.gambar1, "Freya", "Fighter", 1.26, "Chase / Damage", R.drawable.serene, R.drawable.hero2,"0","599", "0", R.drawable.gold,R.string.splus.toString(),R.drawable.jung,"Gold",R.string.jungle.toString(),"null", "null" ),
+        Hero(R.drawable.gambar1, "Aldous", "Fighter", 20.5, "Damage", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString(),"null", "null" ),
+        Hero(R.drawable.gambar1, "Selena", "Assassin", 18.75, "Damage / Burst", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString(),"null", "null" ),
+        Hero(R.drawable.gambar1, "Lancelot", "Assassin", 18.75, "Damage / Burst", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString(),"null", "null" )
+    )
+
 
     private lateinit var bottomNavigationView: BottomNavigationView
 
@@ -50,16 +59,17 @@ class Beranda : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = HeroAdapter(heroes)
 
+        val recyclerViewhori = findViewById<RecyclerView>(R.id.heroRecyclerViewhori)
+        recyclerViewhori.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        recyclerViewhori.adapter = HeroHori(heroeshori)
+        recyclerViewhori.setHasFixedSize(true)
+
+
         val btnlain : Button = findViewById(R.id.btnlainnya)
-        val schero : ImageView = findViewById(R.id.schero1)
+
 
         btnlain.setOnClickListener{
             val intent = Intent (this,lainnya::class.java)
-            startActivity(intent)
-        }
-
-        schero.setOnClickListener{
-            val intent = Intent (this,update_patch::class.java)
             startActivity(intent)
         }
 
@@ -199,5 +209,58 @@ class HeroAdapterGrid(private val heroesgrid: List<Hero>) : RecyclerView.Adapter
     }
 
     override fun getItemCount() = heroesgrid.size
+}
+
+
+class HeroHori(private val heroeshori: List<Hero>) : RecyclerView.Adapter<HeroHori.HeroViewHolder>() {
+
+
+    inner class HeroViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val imgHero: ImageView = itemView.findViewById(R.id.imghero)
+
+        fun bind(hero: Hero) {
+            imgHero.setImageResource(hero.image)
+        }
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HeroViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.horizontal_item, parent, false)
+        return HeroViewHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: HeroViewHolder, position: Int) {
+        Log.d("HeroHori", "Binding item at position: $position")
+        holder.bind(heroeshori[position])
+        holder.itemView.visibility = View.VISIBLE
+
+        holder.itemView.setOnClickListener {
+            val context = holder.itemView.context
+            val hero = heroeshori[position]
+            val intent = Intent(context, update_patch::class.java).apply {
+                putExtra("image", hero.image)
+                putExtra("name", hero.name)
+                putExtra("role", hero.role)
+                putExtra("banRate", hero.banRate)
+                putExtra("type", hero.type)
+                putExtra("bghr", hero.bghr)
+                putExtra("imager", hero.imager)
+                putExtra("gold", hero.gold)
+                putExtra("berlian", hero.berlian)
+                putExtra("tikett", hero.tikett)
+                putExtra("tier", hero.tier)
+                putExtra("destier", hero.destier)
+                putExtra("lane", hero.lane)
+                putExtra("tlane", hero.tlane)
+                putExtra("deslane", hero.deslane)
+                putExtra("desbefore", hero.desbefore)
+                putExtra("desafter", hero.desafter)
+            }
+            context.startActivity(intent)
+        }
+    }
+
+    override fun getItemCount() = heroeshori.size
+
 }
 
