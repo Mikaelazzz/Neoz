@@ -45,6 +45,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+
     private fun isFirstTime(): Boolean {
         val sharedPref = getPreferences(Context.MODE_PRIVATE)
         val isFirstTime = sharedPref.getBoolean("isFirstTime", true)
