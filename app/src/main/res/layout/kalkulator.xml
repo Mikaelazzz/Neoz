@@ -41,6 +41,7 @@
             android:drawablePadding="20dp"
             android:fontFamily="@font/poppinsbold"
             android:textSize="18sp"/>
+
         <Button
             android:id="@+id/lose"
             android:layout_width="375dp"
