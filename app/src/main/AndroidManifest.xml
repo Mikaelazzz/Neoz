@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Neoz"
         tools:targetApi="31">
         <activity
+            android:name=".lose"
+            android:exported="false" />
+        <activity
             android:name=".win"
             android:exported="false" />
         <activity
