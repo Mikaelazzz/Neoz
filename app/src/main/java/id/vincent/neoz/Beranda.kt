@@ -31,8 +31,8 @@ class Beranda : AppCompatActivity() {
     private val heroesgrid = listOf(
         Hero(R.drawable.gambar1, "Ling", "Assasin", 26.27, "Chase / Burst", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung, R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString(),"null", "null" ),
         Hero(R.drawable.gambar1, "Freya", "Fighter", 1.26, "Chase / Damage", R.drawable.serene, R.drawable.hero2,"0","599", "0", R.drawable.gold,R.string.splus.toString(),R.drawable.jung,"Gold",R.string.jungle.toString(),"null", "null" ),
-        Hero(R.drawable.gambar1, "Aldous", "Fighter", 20.5, "Damage", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString(),"null", "null" ),
-        Hero(R.drawable.gambar1, "Lancelot", "Assassin", 18.75, "Damage / Burst", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString(),"null", "null" )
+        Hero(R.drawable.gambar1, "Kagura", "Mage", 20.5, "Damage", R.drawable.serene, R.drawable.hero4,"32000","599", "0", R.drawable.mid,R.string.splus.toString(),R.drawable.jung,"Mid",R.string.jungle.toString(),"null", "null" ),
+        Hero(R.drawable.gambar1, "Lancelot", "Assassin", 18.75, "Damage / Burst", R.drawable.serene, R.drawable.hero3,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString(),"null", "null" )
     )
     private val heroeshori = listOf(
         Hero(R.drawable.gambar1, "Ling", "Assasin", 26.27, "Chase / Burst", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung, R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString(),"null", "null" ),
