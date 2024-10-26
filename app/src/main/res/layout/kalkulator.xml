@@ -27,6 +27,7 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/win"
             android:layout_width="375dp"
             android:layout_height="40dp"
             android:text="Win Rate Dengan Win Streak"
@@ -41,6 +42,7 @@
             android:fontFamily="@font/poppinsbold"
             android:textSize="18sp"/>
         <Button
+            android:id="@+id/lose"
             android:layout_width="375dp"
             android:layout_height="40dp"
             android:text="Win Rate Dengan Lose Streak"
@@ -55,6 +57,7 @@
             android:fontFamily="@font/poppinsbold"
             android:textSize="18sp"/>
         <Button
+            android:id="@+id/mgcw"
             android:layout_width="375dp"
             android:layout_height="40dp"
             android:text="Magic Wheel"
@@ -69,6 +72,7 @@
             android:fontFamily="@font/poppinsbold"
             android:textSize="18sp"/>
         <Button
+            android:id="@+id/zdc"
             android:layout_width="375dp"
             android:layout_height="40dp"
             android:text="Zodiac"
@@ -84,6 +88,7 @@
             android:textSize="18sp"
             />
         <Button
+            android:id="@+id/totalmatchh"
             android:layout_width="375dp"
             android:layout_height="40dp"
             android:text="Cek Total Match Win Lose"
