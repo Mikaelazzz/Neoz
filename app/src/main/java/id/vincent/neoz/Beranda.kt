@@ -84,7 +84,7 @@ class Beranda : AppCompatActivity() {
                     true
                 }
                 R.id.kalkulator -> {
-                    replaceFragment(KalkulatorFragment())
+                    replaceFragment(kalkulator())
                     true
                 }
                 else -> false
