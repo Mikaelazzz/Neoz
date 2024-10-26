@@ -11,4 +11,5 @@
     <string name="jungle">Assassins have the highest damage output. Jungling is a good way for them to farm fast. Assassins have high mobility and burst on single targets but can often be weak when soloing lanes early on. In the early game they can level up quickly by killing creeps and find chances to kill single enemies by teamwork with allies in the same lane</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="win">Digunakan untuk menghitung total jumlah pertandingan yang harus diambil untuk mencapai target tingkat kemenangan yang diinginkan.</string>
 </resources>
