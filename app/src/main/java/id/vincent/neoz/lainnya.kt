@@ -21,7 +21,7 @@ import android.widget.TextView
 class lainnya : AppCompatActivity() {
 
 
-    data class Hero(
+        data class Hero(
         val image: Int,
         val name: String,
         val role: String,
