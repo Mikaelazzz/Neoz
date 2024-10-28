@@ -46,7 +46,7 @@ override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     }
 
     btnTotalMatch.setOnClickListener {
-        val intent = Intent (requireContext(),win::class.java)
+        val intent = Intent (requireContext(),total::class.java)
         startActivity(intent)
     }
 }
