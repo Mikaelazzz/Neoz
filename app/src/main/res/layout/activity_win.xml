@@ -175,6 +175,16 @@
             android:text="Hitung"
             android:textColor="@color/font"
             android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/result_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btnsum"
+            android:padding="12dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
