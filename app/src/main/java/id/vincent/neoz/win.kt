@@ -7,8 +7,10 @@ import android.widget.EditText
 import android.widget.TextView
 import android.view.View
 import android.content.Intent
+import android.os.Build
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
@@ -23,6 +25,7 @@ class win : AppCompatActivity() {
     private lateinit var jumlah: Button
     private lateinit var resultText: TextView
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -44,15 +47,17 @@ class win : AppCompatActivity() {
         setupCalculationButton()
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun setupCalculationButton() {
         jumlah.setOnClickListener {
             calculateRequiredMatches()
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun calculateRequiredMatches() {
         try {
-            // Get input values
+            // Ambil nilai input
             val totalMatches = totalmatch.text.toString().toDouble()
             val currentWR = totalwr.text.toString().toDouble()
             val targetWR = targetwr.text.toString().toDouble()
@@ -61,56 +66,65 @@ class win : AppCompatActivity() {
                 if (resultText.visibility == View.GONE) {
                     resultText.visibility = View.VISIBLE
                 }
-                resultText.text = "Win Rate tidak boleh lebih dari 100%"
-                resultText.setTextColor(resources.getColor(android.R.color.holo_red_light))
+                resultText.text = "Win Rate tidak bisa lebih dari 100%"
+                resultText.setTextColor(resources.getColor(R.color.font))
+                resultText.typeface = resources.getFont(R.font.poppinsbold)
                 return
             }
-            // Validate if target WR is less than current WR
+
+            if (targetWR == 100.0) {
+                if (resultText.visibility == View.GONE) {
+                    resultText.visibility = View.VISIBLE
+                }
+                resultText.text = "Impossible broo"
+                resultText.setTextColor(resources.getColor(R.color.font))
+                resultText.typeface = resources.getFont(R.font.poppinsbold)
+                return
+            }
+
+            // Validasi jika target WR lebih rendah dari WR saat ini
             if (targetWR <= currentWR) {
                 if (resultText.visibility == View.GONE) {
                     resultText.visibility = View.VISIBLE
                 }
                 resultText.text = "Silakan beralih ke Kalkulator Lose Streak untuk menghitung penurunan Win Rate"
-                resultText.setTextColor(resources.getColor(android.R.color.holo_red_light))
-
-                // Optional: Navigate to Lose Streak calculator after delay
-//                resultText.postDelayed({
-//                    val intent = Intent(this, lose::class.java)
-//                    startActivity(intent)
-//                }, 2000) // 2 second delay
-//
-//                return
+                resultText.setTextColor(resources.getColor(R.color.font))
+                resultText.typeface = resources.getFont(R.font.poppinsbold)
+                return
             }
 
-            // Calculate current wins
+            // Hitung jumlah kemenangan saat ini
             val currentWins = (totalMatches * currentWR) / 100
 
-            // Calculate required wins for target WR
+            // Hitung jumlah kemenangan yang dibutuhkan untuk mencapai target Win Rate
             // Formula: x = (TWR * TM - 100W) / (TWR - 100)
-            // Where: TWR = Target Win Rate, TM = Total Matches, W = Current Wins
+            // di mana TWR = Target Win Rate, TM = Total Matches, W = Current Wins
             val requiredWins = abs(ceil((targetWR * totalMatches - 100 * currentWins) / (targetWR - 100)).toInt())
 
-            // Show result TextView if it's hidden
+            // Tampilkan hasil jika belum terlihat
             if (resultText.visibility == View.GONE) {
                 resultText.visibility = View.VISIBLE
             }
 
-            // Display result
-            resultText.text = "Membutuhkan $requiredWins menang Tanpa Kalah untuk mendapatkan ${targetWR.toInt()}% Win Rate"
-            resultText.setTextColor(resources.getColor(R.color.white))
+            // Tampilkan hasil
+            resultText.text = "Membutuhkan $requiredWins menang Tanpa Kalah untuk mendapatkan ${"%.0f".format(targetWR)}% Win Rate"
+            resultText.setTextColor(resources.getColor(R.color.font))
+            resultText.typeface = resources.getFont(R.font.poppinsbold)
 
         } catch (e: NumberFormatException) {
             if (resultText.visibility == View.GONE) {
                 resultText.visibility = View.VISIBLE
             }
             resultText.text = "Mohon masukkan angka yang valid"
-            resultText.setTextColor(resources.getColor(android.R.color.holo_red_light))
+            resultText.setTextColor(resources.getColor(R.color.font))
+            resultText.typeface = resources.getFont(R.font.poppinsbold)
         } catch (e: Exception) {
             if (resultText.visibility == View.GONE) {
                 resultText.visibility = View.VISIBLE
             }
             resultText.text = "Terjadi kesalahan dalam perhitungan"
-            resultText.setTextColor(resources.getColor(android.R.color.holo_red_light))
+            resultText.setTextColor(resources.getColor(R.color.font))
+            resultText.typeface = resources.getFont(R.font.poppinsbold)
         }
     }
 
