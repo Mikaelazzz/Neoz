@@ -184,7 +184,7 @@
             android:background="@drawable/btnsum"
             android:padding="12dp"
             android:textAlignment="center"
-            android:textColor="@color/white"/>
+            android:textColor="@color/font"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
