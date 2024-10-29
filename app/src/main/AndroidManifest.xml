@@ -15,6 +15,12 @@
         android:theme="@style/Theme.Neoz"
         tools:targetApi="31">
         <activity
+            android:name=".zdc"
+            android:exported="false" />
+        <activity
+            android:name=".magicwheel"
+            android:exported="false" />
+        <activity
             android:name=".total"
             android:exported="false" />
         <activity
