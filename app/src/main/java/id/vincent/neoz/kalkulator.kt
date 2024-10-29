@@ -36,12 +36,12 @@ override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     }
 
     btnMagicWheel.setOnClickListener {
-        val intent = Intent (requireContext(),win::class.java)
+        val intent = Intent (requireContext(),magicwheel::class.java)
         startActivity(intent)
     }
 
     btnZodiac.setOnClickListener {
-        val intent = Intent (requireContext(),win::class.java)
+        val intent = Intent (requireContext(),zdc::class.java)
         startActivity(intent)
     }
 
