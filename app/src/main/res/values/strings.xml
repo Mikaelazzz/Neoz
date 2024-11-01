@@ -9,6 +9,12 @@
     <string name="a">These type of heroes are expected to perform just an average game performance because of their abilities and powers lower than the higher tier heroes.</string>
     <string name="b">Ineffectual Tier heroes are below average performing heroes and not much performance should be expected unless they are performing good team play.</string>
     <string name="jungle">Assassins have the highest damage output. Jungling is a good way for them to farm fast. Assassins have high mobility and burst on single targets but can often be weak when soloing lanes early on. In the early game they can level up quickly by killing creeps and find chances to kill single enemies by teamwork with allies in the same lane</string>
+    <string name="gold">Marksmen rely upon their Equipment. Take the Gold Lane farm quickly. Marksmen are relatively weak in the early game but can accumulate equipment items more quickly by killing the Siege Minions that offer extra gold and provide the team with a strong continuous damage ability in the late game</string>
+    <string name="roam">Supports and Tanks dont need to rely upon Equipment. Roaming is a better way for them to protect their core allies. Roaming heroes generally excel at initiating teamfights or can provide strong buffs to allies. A great way to lead your team to victory is by utilizing their skills characteristics and looking for the right time to attack </string>
+    <string name="exp">Fighters rely upon leveling up fast to take advantage. Take the EXP Lane to level up faster and fight for the first Turtle. Fighters and some Tanks can both fight and tank and level up quickly by killing the Siege Minions that offer EXP. This can be a great help to the team in the early game and can help build up better solo capabilities in the mid and late game.</string>
+    <string name="mid">Mages take the Mid Lane and can swiftly clear lanes as well as backing up allies.After reaching a certain level. Mages can deal considerable AoE damage to clear lanes efficiently. It is recommended to take the advantage of the turrets to farm steadily in the early game and be ready to back up and roam in the middle game</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="win">Digunakan untuk menghitung total jumlah pertandingan yang harus diambil untuk mencapai target tingkat kemenangan yang diinginkan.</string>
