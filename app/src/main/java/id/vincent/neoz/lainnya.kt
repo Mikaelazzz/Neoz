@@ -3,7 +3,6 @@ package id.vincent.neoz
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.LinearLayout
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +18,7 @@ import android.widget.ImageView
 import android.widget.TextView
 
 class lainnya : AppCompatActivity() {
+
 
 
         data class Hero(
@@ -41,17 +41,34 @@ class lainnya : AppCompatActivity() {
         val desafter: String
     )
 
-    private val heroes = listOf(
-        Hero(R.drawable.gambar1, "Claude", "Mage", 24.99, "Damage / Crowd Control", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung, R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() ,"null", "null"),
-        Hero(R.drawable.gambar1, "Alice", "Mage", 30.0, "Burst / Crowd Control", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() , "null", "null"),
-        Hero(R.drawable.gambar1, "Aldous", "Fighter", 20.5, "Damage", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() ,"null", "null" ),
-        Hero(R.drawable.gambar1, "Lancelot", "Assassin", 18.75, "Damage / Burst", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung,R.string.splus.toString(),R.drawable.jung,"Jungle",R.string.jungle.toString() ,"null", "null" )
-    )
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_lainnya)
+
+        //        String Desk Tier
+        val Splus = getString(R.string.splus)
+        val S = getString(R.string.s)
+        val Aplus = getString(R.string.aplus)
+        val A = getString(R.string.a)
+        val B = getString(R.string.b)
+
+        //        String Role
+        val jungle = getString(R.string.jungle)
+        val gold = getString(R.string.gold)
+        val exp = getString(R.string.exp)
+        val roam = getString(R.string.roam)
+        val mid = getString(R.string.mid)
+
+        val heroes = listOf(
+            Hero(R.drawable.gambar1, "Ling", "Assasin", 26.27, "Chase / Burst", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung, Splus,R.drawable.jung,"Jungle",jungle,"null", "null" ),
+            Hero(R.drawable.gambar1, "Freya", "Fighter", 1.26, "Chase / Damage", R.drawable.freya, R.drawable.hero2,"0","599", "0", R.drawable.gold,Splus,R.drawable.gold,"Gold",gold,"null", "null" ),
+            Hero(R.drawable.gambar1, "Aldous", "Fighter", 20.5, "Damage", R.drawable.serene, R.drawable.hero3,"32000","599", "0", R.drawable.exp, B,R.drawable.exp,"Exp",exp,"null", "null" ),
+            Hero(R.drawable.gambar1, "Selena", "Assassin / Mage", 18.75, "Damage / Burst", R.drawable.freya, R.drawable.hero4,"32000","599", "0", R.drawable.roam,B,R.drawable.roam,"Roam",roam,"null", "null" ),
+            Hero(R.drawable.gambar1, "Lancelot", "Assassin", 18.75, "Damage / Burst", R.drawable.serene, R.drawable.hero5,"32000","599", "0", R.drawable.jung,A,R.drawable.jung,"Jungle", jungle,"null", "null" )
+        )
 
         val recyclerView = findViewById<RecyclerView>(R.id.heroRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
