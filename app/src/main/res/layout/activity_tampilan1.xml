@@ -27,220 +27,231 @@
     </androidx.appcompat.widget.Toolbar>
 
 
-    <ImageView
-        android:id="@+id/bghero"
-        android:layout_below="@+id/toolbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxHeight="300dp"
-        android:maxWidth="1000dp"
-        android:layout_marginTop="5dp"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
- />
-
-    <ImageView
-        android:id="@+id/logohero"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="248dp"
-        android:layout_marginLeft="30dp"
-
-        />
-
-    <TextView
-        android:id="@+id/titlehero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:fontFamily="@font/poppinsbold"
-        android:textColor="@color/font"
-        android:textSize="24sp"
-
-        android:layout_marginTop="260dp"
-        android:layout_marginLeft="115dp"
-        />
-    <TextView
-        android:id="@+id/rolehero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:fontFamily="@font/poppinsbold"
-        android:textColor="@color/font"
-        android:textSize="18sp"
-        android:layout_marginTop="295dp"
-        android:layout_marginLeft="115dp"
-        />
-
-    <LinearLayout
-        android:id="@+id/hargahero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/logohero"
-        android:layout_marginTop="12dp"
-        android:layout_marginLeft="30dp"
-        android:orientation="vertical"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal">
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/bp"
-                android:scaleType="fitCenter"/>
-
-            <TextView
-                android:id="@+id/bpoin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppinsbold"
-
-                android:textAlignment="viewStart"
-                android:paddingHorizontal="3dp"
-                android:textColor="@color/font"
-                android:textSize="15sp"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal">
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/dm"
-                android:scaleType="fitCenter"/>
-
-            <TextView
-                android:id="@+id/dm"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppinsbold"
-
-                android:textAlignment="viewStart"
-                android:paddingHorizontal="3dp"
-                android:textColor="@color/font"
-                android:textSize="15sp"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal">
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/tikett"
-                android:scaleType="fitCenter"/>
-
-            <TextView
-                android:id="@+id/tiket"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppinsbold"
-
-                android:textAlignment="viewStart"
-                android:paddingHorizontal="3dp"
-                android:textColor="@color/font"
-                android:textSize="15sp"
-                />
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/des"
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/toolbar"
+    >
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_below="@id/hargahero"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hero Tier"
-            android:fontFamily="@font/poppinsbold"
-            android:textSize="24sp"
-            android:textColor="@color/font"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="10dp"
-            />
+        android:layout_height="wrap_content"
+        android:id="@+id/scrolll">
 
         <ImageView
-            android:id="@+id/tierhero"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-
-            android:layout_marginLeft="30dp"
-            android:layout_marginBottom="15dp"/>
-
-        <TextView
-            android:id="@+id/desktier"
+            android:id="@+id/bghero"
+            android:layout_below="@+id/scrolll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:maxHeight="300dp"
+            android:maxWidth="1000dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            tools:ignore="NotSibling" />
+
+        <ImageView
+            android:id="@+id/logohero"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="248dp"
             android:layout_marginLeft="30dp"
-            android:fontFamily="@font/poppinsbold"
-            android:textSize="15sp"
-            android:textColor="@color/font"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/des"
-        android:orientation="vertical">
+
+            />
 
         <TextView
+            android:id="@+id/titlehero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hero Lane"
+
             android:fontFamily="@font/poppinsbold"
-            android:textSize="24sp"
             android:textColor="@color/font"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="10dp"
+            android:textSize="24sp"
+
+            android:layout_marginTop="260dp"
+            android:layout_marginLeft="115dp"
+            />
+        <TextView
+            android:id="@+id/rolehero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="@color/font"
+            android:textSize="18sp"
+            android:layout_marginTop="295dp"
+            android:layout_marginLeft="115dp"
             />
 
         <LinearLayout
+            android:id="@+id/hargahero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_below="@+id/logohero"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="30dp"
+            android:orientation="vertical"
             >
-
-            <ImageView
-                android:id="@+id/heroLane"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="30dp"/>
-
-
-            <TextView
-                android:id="@+id/titleherolane"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/poppinsbold"
-                android:textSize="21sp"
-                android:textColor="@color/font"
-                android:layout_marginLeft="10dp"/>
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bp"
+                    android:scaleType="fitCenter"/>
 
+                <TextView
+                    android:id="@+id/bpoin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsbold"
+
+                    android:textAlignment="viewStart"
+                    android:paddingHorizontal="3dp"
+                    android:textColor="@color/font"
+                    android:textSize="15sp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/dm"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:id="@+id/dm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsbold"
+
+                    android:textAlignment="viewStart"
+                    android:paddingHorizontal="3dp"
+                    android:textColor="@color/font"
+                    android:textSize="15sp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/tikett"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:id="@+id/tiket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsbold"
+
+                    android:textAlignment="viewStart"
+                    android:paddingHorizontal="3dp"
+                    android:textColor="@color/font"
+                    android:textSize="15sp"
+                    />
+            </LinearLayout>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/deskherolane"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/des"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/poppinsbold"
-            android:textSize="15sp"
-            android:textColor="@color/font"/>
-    </LinearLayout>
+            android:layout_below="@id/hargahero"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hero Tier"
+                android:fontFamily="@font/poppinsbold"
+                android:textSize="24sp"
+                android:textColor="@color/font"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/tierhero"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/desktier"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@font/poppinsbold"
+                android:textSize="15sp"
+                android:textColor="@color/font"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/des"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hero Lane"
+                android:fontFamily="@font/poppinsbold"
+                android:textSize="24sp"
+                android:textColor="@color/font"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:id="@+id/heroLane"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="30dp"/>
+
+
+                <TextView
+                    android:id="@+id/titleherolane"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textSize="21sp"
+                    android:textColor="@color/font"
+                    android:layout_marginLeft="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/deskherolane"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/poppinsbold"
+                android:textSize="15sp"
+                android:textColor="@color/font"/>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
 
 
 
