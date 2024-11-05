@@ -5,11 +5,7 @@
     android:orientation="horizontal"
     android:padding="10dp">
 
-    <ImageView
-        android:id="@+id/imghero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="Hero Image" />
+  
 
     <LinearLayout
         android:layout_width="0dp"
