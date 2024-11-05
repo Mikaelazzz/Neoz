@@ -39,7 +39,11 @@ class Beranda : AppCompatActivity() {
         val B = getString(R.string.b)
 
 //        String Role
-
+        val jungle = getString(R.string.jungle)
+        val gold = getString(R.string.gold)
+        val exp = getString(R.string.exp)
+        val roam = getString(R.string.roam)
+        val mid = getString(R.string.mid)
 
 
             val heroes = listOf(
