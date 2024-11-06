@@ -3,6 +3,7 @@ package id.vincent.neoz
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
@@ -11,7 +12,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import org.w3c.dom.Text
+
 
 class update_patch : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,23 +20,14 @@ class update_patch : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_update_patch)
 
-        val heroImage = intent.getIntExtra("image", 0)
         val heroName = intent.getStringExtra("name")
         val heroRole = intent.getStringExtra("role")
-        val heroBanRate = intent.getDoubleExtra("banRate", 0.0)
-        val heroType = intent.getStringExtra("type")
         val bgHr = intent.getIntExtra("bghr", 0)
         val imageR = intent.getIntExtra("imager",0)
-        val goldBp = intent.getStringExtra("gold")
-        val berlianDm = intent.getStringExtra("berlian")
-        val tiketMl = intent.getStringExtra("tikett")
-        val tierHr = intent.getIntExtra("tier",0)
-        val desTier = intent.getStringExtra("destier")
-        val laneHr = intent.getIntExtra("lane",0)
-        val tlaneHr = intent.getStringExtra("tlane")
-        val deslaneHr = intent.getStringExtra("deslane")
         val desBefore = intent.getStringExtra("desbefore")
         val desAfter = intent.getStringExtra("desafter")
+        val patchImg = intent.getIntExtra("patchh", 0)
+        val textPatch = intent.getStringExtra("textpatchh")
 
 
         val bghero = findViewById<ImageView>(R.id.bghero)
@@ -44,6 +36,8 @@ class update_patch : AppCompatActivity() {
         val roleHero = findViewById<TextView>(R.id.rolehero)
         val deskbeforee = findViewById<TextView>(R.id.desksebelum)
         val deskafterr = findViewById<TextView>(R.id.desksesudah)
+        val patchimg = findViewById<LinearLayout>(R.id.patch)
+        val textpatch = findViewById<TextView>(R.id.textpatch)
 
         bghero.setImageResource(bgHr)
         imgHero.setImageResource(imageR)
@@ -51,6 +45,8 @@ class update_patch : AppCompatActivity() {
         roleHero.text = heroRole ?: "Null"
         deskbeforee.text = desBefore ?: "Null"
         deskafterr.text = desAfter ?: "Null"
+        patchimg.setBackgroundResource(patchImg)
+        textpatch.text = textPatch ?: "Null"
 
 
         // Mengaktifkan tombol back pada action bar
