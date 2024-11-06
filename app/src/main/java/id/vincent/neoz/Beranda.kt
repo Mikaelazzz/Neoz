@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -47,24 +48,24 @@ class Beranda : AppCompatActivity() {
 
 
             val heroes = listOf(
-                Hero(R.drawable.gambar1, "Claude", "Mage", 24.99, "Damage / Crowd Control", R.drawable.serene, R.drawable.hero1, "32000", "599", "0", R.drawable.jung, Splus, R.drawable.jung, "Jungle", jungle, "null", "null"),
-                Hero(R.drawable.gambar1, "Claude", "Mage", 24.99, "Damage / Crowd Control", R.drawable.freya, R.drawable.hero1, "32000", "599", "0", R.drawable.jung, Splus, R.drawable.jung, "Jungle", jungle, "null", "null")
+                Hero(R.drawable.gambar1, "Claude", "Mage", 24.99, "Damage / Crowd Control", R.drawable.serene, R.drawable.hero1, "32000", "599", "0", R.drawable.jung, Splus, R.drawable.jung, "Jungle", jungle, "null", "null", R.drawable.buff, "Buff"),
+                Hero(R.drawable.gambar1, "Claude", "Mage", 24.99, "Damage / Crowd Control", R.drawable.freya, R.drawable.hero1, "32000", "599", "0", R.drawable.jung, Splus, R.drawable.jung, "Jungle", jungle, "null", "null", R.drawable.buff, "Buff")
         )
 
              val heroesgrid = listOf(
-                 Hero(R.drawable.gambar1, "Ling", "Assasin", 26.27, "Chase / Burst", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung, Splus,R.drawable.jung,"Jungle",jungle,"null", "null" ),
-                 Hero(R.drawable.gambar1, "Freya", "Fighter", 1.26, "Chase / Damage", R.drawable.freya, R.drawable.hero2,"0","599", "0", R.drawable.gold,Splus,R.drawable.gold,"Gold",gold,"null", "null" ),
-                 Hero(R.drawable.gambar1, "Aldous", "Fighter", 20.5, "Damage", R.drawable.serene, R.drawable.hero3,"32000","599", "0", R.drawable.exp, B,R.drawable.exp,"Exp",exp,"null", "null" ),
-                 Hero(R.drawable.gambar1, "Selena", "Assassin / Mage", 18.75, "Damage / Burst", R.drawable.freya, R.drawable.hero4,"32000","599", "0", R.drawable.roam,B,R.drawable.roam,"Roam",roam,"null", "null" ),
-                 Hero(R.drawable.gambar1, "Lancelot", "Assassin", 18.75, "Damage / Burst", R.drawable.serene, R.drawable.hero5,"32000","599", "0", R.drawable.jung,A,R.drawable.jung,"Jungle", jungle,"null", "null" )
-        )
+                 Hero(R.drawable.gambar1, "Ling", "Assasin", 26.27, "Chase / Burst", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung, Splus,R.drawable.jung,"Jungle",jungle,"null", "null", R.drawable.buff, "Buff" ),
+                 Hero(R.drawable.gambar1, "Freya", "Fighter", 1.26, "Chase / Damage", R.drawable.freya, R.drawable.hero2,"0","599", "0", R.drawable.gold,Splus,R.drawable.gold,"Gold",gold,"null", "null", R.drawable.buff, "Buff" ),
+                 Hero(R.drawable.gambar1, "Aldous", "Fighter", 20.5, "Damage", R.drawable.serene, R.drawable.hero3,"32000","599", "0", R.drawable.exp, B,R.drawable.exp,"Exp",exp,"null", "null", R.drawable.buff, "Buff" ),
+                 Hero(R.drawable.gambar1, "Selena", "Assassin / Mage", 18.75, "Damage / Burst", R.drawable.freya, R.drawable.hero4,"32000","599", "0", R.drawable.roam,B,R.drawable.roam,"Roam",roam,"null", "null", R.drawable.buff, "Buff" ),
+                 Hero(R.drawable.gambar1, "Lancelot", "Assassin", 18.75, "Damage / Burst", R.drawable.serene, R.drawable.hero5,"32000","599", "0", R.drawable.jung,A,R.drawable.jung,"Jungle", jungle,"null", "null", R.drawable.buff, "Buff" )
+             )
              val heroeshori = listOf(
-            Hero(R.drawable.gambar1, "Ling", "Assasin", 26.27, "Chase / Burst", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung, Splus,R.drawable.jung,"Jungle",jungle,"null", "null" ),
-            Hero(R.drawable.gambar1, "Freya", "Fighter", 1.26, "Chase / Damage", R.drawable.freya, R.drawable.hero2,"0","599", "0", R.drawable.gold,Splus,R.drawable.gold,"Gold",gold,"null", "null" ),
-            Hero(R.drawable.gambar1, "Aldous", "Fighter", 20.5, "Damage", R.drawable.serene, R.drawable.hero3,"32000","599", "0", R.drawable.exp, B,R.drawable.exp,"Exp",exp,"null", "null" ),
-            Hero(R.drawable.gambar1, "Selena", "Assassin / Mage", 18.75, "Damage / Burst", R.drawable.freya, R.drawable.hero4,"32000","599", "0", R.drawable.roam,B,R.drawable.roam,"Roam",roam,"null", "null" ),
-            Hero(R.drawable.gambar1, "Lancelot", "Assassin", 18.75, "Damage / Burst", R.drawable.serene, R.drawable.hero5,"32000","599", "0", R.drawable.jung,A,R.drawable.jung,"Jungle", jungle,"null", "null" )
-        )
+                 Hero(R.drawable.gambar1, "Ling", "Assasin", 26.27, "Chase / Burst", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung, Splus,R.drawable.jung,"Jungle",jungle,"null", "null", R.drawable.buff, "Buff" ),
+                 Hero(R.drawable.gambar1, "Freya", "Fighter", 1.26, "Chase / Damage", R.drawable.freya, R.drawable.hero2,"0","599", "0", R.drawable.gold,Splus,R.drawable.gold,"Gold",gold,"null", "null", R.drawable.nerf, "Nerf" ),
+                 Hero(R.drawable.gambar1, "Aldous", "Fighter", 20.5, "Damage", R.drawable.serene, R.drawable.hero3,"32000","599", "0", R.drawable.exp, B,R.drawable.exp,"Exp",exp,"null", "null", R.drawable.penyesuaian, "Penyesuaian" ),
+                 Hero(R.drawable.gambar1, "Selena", "Assassin / Mage", 18.75, "Damage / Burst", R.drawable.freya, R.drawable.hero4,"32000","599", "0", R.drawable.roam,B,R.drawable.roam,"Roam",roam,"null", "null", R.drawable.buff, "Buff" ),
+                 Hero(R.drawable.gambar1, "Lancelot", "Assassin", 18.75, "Damage / Burst", R.drawable.serene, R.drawable.hero5,"32000","599", "0", R.drawable.jung,A,R.drawable.jung,"Jungle", jungle,"null", "null", R.drawable.buff, "Buff" )
+             )
 
         // Tambahkan ini di dalam onCreate setelah inisialisasi heroRecyclerView
         val recyclerViewGrid = findViewById<RecyclerView>(R.id.heroRecyclerViewGrid)
@@ -234,9 +235,13 @@ class HeroHori(private val heroeshori: List<Hero>) : RecyclerView.Adapter<HeroHo
 
     inner class HeroViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val imgHero: ImageView = itemView.findViewById(R.id.imghero)
+        private val patchImg: LinearLayout = itemView.findViewById(R.id.patch)
+        private val textPatch: TextView = itemView.findViewById(R.id.textpatch)
 
         fun bind(hero: Hero) {
             imgHero.setImageResource(hero.image)
+            patchImg.setBackgroundResource(hero.patchimg)
+            textPatch.text = hero.textpatch
         }
     }
 
@@ -272,6 +277,8 @@ class HeroHori(private val heroeshori: List<Hero>) : RecyclerView.Adapter<HeroHo
                 putExtra("deslane", hero.deslane)
                 putExtra("desbefore", hero.desbefore)
                 putExtra("desafter", hero.desafter)
+                putExtra("patchh", hero.patchimg)
+                putExtra("textpatchh", hero.textpatch)
             }
             context.startActivity(intent)
         }
