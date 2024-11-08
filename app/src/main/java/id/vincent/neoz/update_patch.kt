@@ -20,14 +20,7 @@ class update_patch : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_update_patch)
 
-        val heroName = intent.getStringExtra("name")
-        val heroRole = intent.getStringExtra("role")
-        val bgHr = intent.getIntExtra("bghr", 0)
-        val imageR = intent.getIntExtra("imager",0)
-        val desBefore = intent.getStringExtra("desbefore")
-        val desAfter = intent.getStringExtra("desafter")
-        val patchImg = intent.getIntExtra("patchh", 0)
-        val textPatch = intent.getStringExtra("textpatchh")
+        val
 
 
         val bghero = findViewById<ImageView>(R.id.bghero)
