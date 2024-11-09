@@ -59,13 +59,7 @@ class Beranda : AppCompatActivity() {
                  Hero(R.drawable.gambar1, "Selena", "Assassin / Mage", 18.75, "Damage / Burst", R.drawable.freya, R.drawable.hero4,"32000","599", "0", R.drawable.roam,B,R.drawable.roam,"Roam",roam,"null", "null", R.drawable.buff, "Buff" ),
                  Hero(R.drawable.gambar1, "Lancelot", "Assassin", 18.75, "Damage / Burst", R.drawable.serene, R.drawable.hero5,"32000","599", "0", R.drawable.jung,A,R.drawable.jung,"Jungle", jungle,"null", "null", R.drawable.buff, "Buff" )
              )
-             val heroeshori = listOf(
-                 Hero(R.drawable.gambar1, "Ling", "Assasin", 26.27, "Chase / Burst", R.drawable.serene, R.drawable.hero1,"32000","599", "0", R.drawable.jung, Splus,R.drawable.jung,"Jungle",jungle,"null", "null", R.drawable.buff, "Buff" ),
-                 Hero(R.drawable.gambar1, "Freya", "Fighter", 1.26, "Chase / Damage", R.drawable.freya, R.drawable.hero2,"0","599", "0", R.drawable.gold,Splus,R.drawable.gold,"Gold",gold,"null", "null", R.drawable.nerf, "Nerf" ),
-                 Hero(R.drawable.gambar1, "Aldous", "Fighter", 20.5, "Damage", R.drawable.serene, R.drawable.hero3,"32000","599", "0", R.drawable.exp, B,R.drawable.exp,"Exp",exp,"null", "null", R.drawable.penyesuaian, "Penyesuaian" ),
-                 Hero(R.drawable.gambar1, "Selena", "Assassin / Mage", 18.75, "Damage / Burst", R.drawable.freya, R.drawable.hero4,"32000","599", "0", R.drawable.roam,B,R.drawable.roam,"Roam",roam,"null", "null", R.drawable.buff, "Buff" ),
-                 Hero(R.drawable.gambar1, "Lancelot", "Assassin", 18.75, "Damage / Burst", R.drawable.serene, R.drawable.hero5,"32000","599", "0", R.drawable.jung,A,R.drawable.jung,"Jungle", jungle,"null", "null", R.drawable.buff, "Buff" )
-             )
+
 
         // Tambahkan ini di dalam onCreate setelah inisialisasi heroRecyclerView
         val recyclerViewGrid = findViewById<RecyclerView>(R.id.heroRecyclerViewGrid)
