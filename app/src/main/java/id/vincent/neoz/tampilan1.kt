@@ -33,7 +33,7 @@ class tampilan1 : AppCompatActivity() {
         val tlaneHr = intent.getStringExtra("tlane")
         val deslaneHr = intent.getStringExtra("deslane")
 
-
+        val banHero = findViewById<TextView>(R.id.banhero)
         val bghero = findViewById<ImageView>(R.id.bghero)
         val imgHero = findViewById<ImageView>(R.id.logohero)
         val nameHero = findViewById<TextView>(R.id.titlehero)
@@ -46,11 +46,14 @@ class tampilan1 : AppCompatActivity() {
         val heroLane = findViewById<ImageView>(R.id.heroLane)
         val titleHeroLane = findViewById<TextView>(R.id.titleherolane)
         val deskHeroLane = findViewById<TextView>(R.id.deskherolane)
+        val banRateFormatted = String.format("%.2f", heroBanRate)
 
         bghero.setImageResource(bgHr)
         imgHero.setImageResource(imageR)
         nameHero.text = heroName ?: "Null"
         roleHero.text = heroRole ?: "Null"
+
+        banHero.text = banRateFormatted
         bpoin.text = goldBp ?: "0"
         dm.text = berlianDm ?: "0"
         tiket.text = tiketMl ?: "0"
