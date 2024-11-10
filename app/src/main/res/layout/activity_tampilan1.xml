@@ -47,7 +47,49 @@
             android:layout_marginTop="5dp"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
+            android:src="@drawable/serene"
             tools:ignore="NotSibling" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bghero"
+            android:layout_alignParentRight="true"
+            >
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="35dp"
+                android:src="@drawable/banrate"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                android:paddingStart="15dp"
+                android:paddingTop="2.4dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ban Rate : "
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="@color/fontban"
+                    />
+                <TextView
+                    android:id="@+id/banhero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="26.27"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="@color/font"
+                    tools:ignore="InvalidId"
+                    android:paddingStart="3dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
 
         <ImageView
             android:id="@+id/logohero"
