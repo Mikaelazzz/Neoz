@@ -51,11 +51,6 @@ class lainnya : AppCompatActivity() {
         setContentView(R.layout.activity_lainnya)
 
         //        String Desk Tier
-        val Splus = getString(R.string.splus)
-        val S = getString(R.string.s)
-        val Aplus = getString(R.string.aplus)
-        val A = getString(R.string.a)
-        val B = getString(R.string.b)
 
         //        String Role
         val jungle = getString(R.string.jungle)
