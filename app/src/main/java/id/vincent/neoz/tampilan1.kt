@@ -32,6 +32,9 @@ class tampilan1 : AppCompatActivity() {
         val laneHr = intent.getIntExtra("lane",0)
         val tlaneHr = intent.getStringExtra("tlane")
         val deslaneHr = intent.getStringExtra("deslane")
+
+        val banHero = findViewById<TextView>(R.id.banhero)
+        val bghero = findViewById<ImageView>(R.id.bghero)
         val imgHero = findViewById<ImageView>(R.id.logohero)
         val nameHero = findViewById<TextView>(R.id.titlehero)
         val roleHero = findViewById<TextView>(R.id.rolehero)
