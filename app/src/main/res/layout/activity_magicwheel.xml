@@ -63,7 +63,7 @@
         android:id="@+id/titledesk"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Kalkulator Zodiac"
+        android:text="Kalkulator Magic Wheel"
         android:textSize="24sp"
         android:fontFamily="@font/poppinsbold"
         android:textColor="@color/font"
