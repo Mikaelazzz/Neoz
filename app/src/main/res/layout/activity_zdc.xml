@@ -77,7 +77,7 @@
         android:id="@+id/titleDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Digunakan untuk mengetahui total maksimal diamond yang dibutuhkan untuk mendapatkan skin Legends."
+        android:text="Digunakan untuk mengetahui total maksimal diamond yang dibutuhkan untuk mendapatkan skin Zodiac."
         android:textAlignment="center"
         android:textSize="14sp"
         android:fontFamily="@font/poppinsregular"
