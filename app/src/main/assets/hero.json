@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Claude",
+    "image": "gambar1",
+    "role": "Marksman",
+    "banRate": 24.99,
+    "type": "Damage / Crowd Control",
+    "bghr": "R.drawable.claudewp",
+    "imager": "R.drawable.hero6",
+    "gold": "32000",
+    "berlian": "599",
+    "tikett": "0",
+    "lane": "Gold Lane",
+    "tlane": null,
+    "deslane": null,
+    "patchimg": "R.drawable.buff",
+    "textpatch": "Buff"
+  },
+  {}
+]
