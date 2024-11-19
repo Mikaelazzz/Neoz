@@ -5,44 +5,77 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.view.animation.AnimationUtils
+import android.view.View
 import android.widget.ImageView
-import android.widget.TextView
+import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var progressBar: ProgressBar
+    private lateinit var logo: ImageView
+    private val handler = Handler(Looper.getMainLooper())
+    private var progressStatus = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val logo: ImageView = findViewById(R.id.logo)
-        val loaText: TextView = findViewById(R.id.loading)
+        logo = findViewById(R.id.logo)
+        progressBar = findViewById(R.id.loading)
 
-        val animate = AnimationUtils.loadAnimation(this, R.anim.fade)
+        // Show the ProgressBar while loading
+        progressBar.visibility = View.VISIBLE
 
+        // Start updating the progress bar
+        updateProgressBar()
+    }
 
-        logo.startAnimation(animate)
-        loaText.startAnimation(animate)
+    private fun updateProgressBar() {
+        Thread {
+            val totalDuration = 2000 // Total duration in milliseconds
+            val updateInterval = 40 // Update interval in milliseconds
+            val totalUpdates = totalDuration / updateInterval // Total number of updates
+            val increment = 100 / totalUpdates // Increment per update
 
+            while (progressStatus < 100) {
+                // Simulate some work being done by sleeping the thread for a short time
+                try {
+                    Thread.sleep(updateInterval.toLong()) // Sleep for the defined interval
+                } catch (e: InterruptedException) {
+                    e.printStackTrace()
+                }
+                // Increment progress status based on calculated increment
+                progressStatus += increment.toInt()
 
-        Handler(Looper.getMainLooper()).postDelayed({
-            if (isFirstTime()){
+                // Update the progress bar on the UI thread
+                handler.post {
+                    if (progressStatus > 100) {
+                        progressStatus = 100 // Ensure it doesn't exceed 100%
+                    }
+                    progressBar.progress = progressStatus
+                }
+            }
+
+            // After completing the progress, launch the next activity
+            launchNextActivity()
+        }.start()
+    }
+
+    private fun launchNextActivity() {
+        handler.post {
+            progressBar.visibility = View.GONE // Hide the ProgressBar when done
+
+            if (isFirstTime()) {
                 val intent = Intent(this@MainActivity, MainActivity2::class.java)
                 startActivity(intent)
             } else {
                 val intent = Intent(this@MainActivity, Beranda::class.java)
                 startActivity(intent)
             }
-            finish()
-        }, 3000)
-
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+            finish() // Close this activity
         }
     }
 
@@ -56,5 +89,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return isFirstTime
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        handler.removeCallbacksAndMessages(null) // Clean up handler callbacks if needed
     }
 }
