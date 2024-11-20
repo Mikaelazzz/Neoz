@@ -6,4 +6,5 @@
     <color name="fontban">#D73F3F</color>
     <color name="button">#3B73CA</color>
     <color name="pressed_button">#274D83</color>
+    <color name="background">#5f72bd</color>
 </resources>
