@@ -24,7 +24,6 @@
             android:fontFamily="@font/poppinsbold"
             android:textSize="20sp"
             android:textColor="@color/font"
-
             />
     </androidx.appcompat.widget.Toolbar>
 
