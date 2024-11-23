@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".magicwheel"
+    tools:context=".zdc"
     android:background="@color/background">
 <!--    android:background="@drawable/gradient">-->
 
